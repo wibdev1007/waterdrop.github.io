@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+*{
+    font-family: 'Allison', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #edeeed;
+}
+
+.drops{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border-radius: 41% 59% 43% 57% / 53% 68% 32% 47% ;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0,0.05),
+                15px 25px 10px rgba(0, 0, 0, 0.1),
+                15px 20px 20px rgba(0, 0, 0, 0.05),
+                inset -10px -10px 15px rgba(255,255,255,0.9);
+}
+
+.drop::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 30px;
+    left: 25px;
+    background-color: #fff;
+    border-radius: 59% 41% 51% 49% / 54% 31% 69% 46% ;
+}
+
+.drop::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 15px;
+    left: 50px;
+    background-color:#fff;
+    border-radius: 59% 41% 51% 49% / 54% 31% 69% 46% ;
+}
+
+.drop:nth-child(2){
+    transform: scale(0.5) translate(-150px, 250px);
+    border-radius: 55% 45% 40% 60% / 69% 46% 54% 31% ;
+}
+
+.drop:nth-child(3){
+    transform: scale(0.3) translate(500px, 50px);
+    border-radius: 38% 62% 45% 55% / 56% 45% 55% 44% ;
+}
+
+.drop:nth-child(4){
+    transform: scale(0.4) translate(250px, -250px);
+    border-radius:58% 42% 46% 54% / 34% 61% 39% 66%;
+}
+
+.someone{
+    transform: skewY(8deg);
+    position: relative;
+    left: -70px;
+    top: 10px;
+}
+
+.someone-name{
+    color: orange;
+    font-size: 68px;
+    text-transform: capitalize;
+    filter: blur(1px);
+    text-shadow: 5px 5px 10px orange;
+}
+
